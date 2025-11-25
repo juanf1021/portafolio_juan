@@ -28,6 +28,167 @@
 
     .logo {
         font-size: 1.3rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Hero - FIXED BUTTON OVERLAP */
+    .hero {
+        min-height: 70vh;
+        padding: 60px 0 40px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+        display: block;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Grid layouts */
+    .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Cards */
+    .card {
+        padding: 25px 20px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    /* Case Study */
+    .case-study-flow {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+        font-size: 1.5rem;
+    }
+
+    .step {
+        padding: 20px;
+    }
+
+    /* Tech Stack */
+    .tech-stack-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tool-card {
+        padding: 20px;
+    }
+
+    .tool-card.expanded {
+        grid-column: span 1;
+    }
+
+    .tool-icon {
+        font-size: 2rem;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-thumbnail {
+        height: 180px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-tags {
+        gap: 8px;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+
+    /* Constellation - EXPANDED ORBITS FOR BETTER SPACING */
+    .constellation-container {
+        max-width: 320px;
+        height: 320px;
+        margin: 40px auto;
+    }
+
+    .core-system {
+        width: 70px;
+        height: 70px;
+        font-size: 0.65rem;
+    }
+
+    /* Expanded orbits to prevent overlap */
+    .orbit-1 {
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+    .orbit-2 {
+        width: 210px !important;
+        height: 210px !important;
+    }
+
+    .orbit-3 {
+        width: 260px !important;
+        height: 260px !important;
+    }
+
+    .orbit-4 {
+        width: 310px !important;
+        height: 310px !important;
+    }
+
+    .orbit-5,
+    .orbit-6 {
+        display: none;
+    }
+
+    .planet {
+        width: 32px;
+        height: 32px;
+    }
+
+    .planet-label {
+        font-size: 0.6rem;
+    }
+
+    .planet-tooltip {
+        display: none !important;
+    }
+
+    /* Certifications */
+    .cert-grid {
+        grid-template-columns: 1fr;
         gap: 15px;
     }
 
