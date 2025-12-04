@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. Hero Typing Effect ---
     const typingElement = document.getElementById('typing-text');
-    const words = ["Manual Work", "Busywork", "Repetitive Tasks", "Inefficiency"];
+    const words = ["Manual Work", "Busywork", "Time Waste", "Inefficiency"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -34,6 +34,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (typingElement) type();
+
+    // --- 1.5. Scroll Indicator ---
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        // Create scroll indicator
+        const scrollIndicator = document.createElement('div');
+        scrollIndicator.className = 'scroll-indicator';
+        scrollIndicator.innerHTML = `
+            <div class="scroll-chevron"></div>
+        `;
+
+        // Add click handler to scroll to next section
+        scrollIndicator.addEventListener('click', () => {
+            document.querySelector('#work').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Append to hero section
+        heroSection.appendChild(scrollIndicator);
+
+        // Hide indicator when user scrolls
+        let scrolled = false;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100 && !scrolled) {
+                scrolled = true;
+                heroSection.classList.add('scrolled');
+            }
+        });
+    }
 
     // --- 2. Tech Stack Showcase - Expandable Cards ---
     const toolCards = document.querySelectorAll('.tool-card');

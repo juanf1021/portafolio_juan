@@ -1,0 +1,86 @@
+/* Scroll Hint Animation - More noticeable bounce */
+@keyframes subtle-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Apply bounce to hero section */
+.hero {
+    animation: subtle-bounce 2.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* Scroll Indicator (Chevron/Arrow) - Compact circle */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    z-index: 100;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    background: rgba(15, 15, 17, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+    background: rgba(15, 15, 17, 0.6);
+    transform: translateX(-50%) scale(1.15);
+}
+
+/* Animated Chevron - Larger and more visible */
+.scroll-chevron {
+    width: 32px;
+    height: 32px;
+    border-left: 3px solid #3b82f6;
+    border-bottom: 3px solid #3b82f6;
+    transform: rotate(-45deg);
+    animation: chevron-bounce 1.5s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+@keyframes chevron-bounce {
+
+    0%,
+    100% {
+        transform: rotate(-45deg) translateY(0);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: rotate(-45deg) translateY(12px);
+        opacity: 1;
+    }
+}
+
+/* Hide scroll indicator on mobile landscape or when scrolled */
+@media (max-height: 500px) and (orientation: landscape) {
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* Stop animation when user has scrolled */
+.hero.scrolled {
+    animation: none;
+}
+
+.hero.scrolled .scroll-indicator {
+    opacity: 0;
+    pointer-events: none;
+}
