@@ -379,6 +379,58 @@
     }
 }
 
+/* ── New sections: mobile ── */
+@media (max-width: 480px) {
+
+    /* Stats */
+    .stats-section {
+        padding: 36px 0;
+    }
+
+    /* Featured project cards */
+    .featured-projects-list {
+        gap: 24px;
+    }
+
+    .featured-project-card {
+        padding: 20px 16px;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .project-title-main {
+        font-size: 1.15rem;
+        margin-bottom: 16px;
+    }
+
+    .story-step {
+        font-size: 0.68rem;
+    }
+
+    .story-block {
+        padding: 14px 16px;
+    }
+
+    .story-block p {
+        font-size: 0.85rem;
+    }
+
+    /* Video slot — keep 16:9 naturally */
+    .project-video-slot {
+        margin-top: 16px;
+    }
+
+    /* Coming soon badge */
+    .coming-soon-badge {
+        font-size: 0.72rem;
+        padding: 6px 14px;
+    }
+}
+
 /* Print Styles */
 @media print {
 

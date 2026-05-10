@@ -20,12 +20,14 @@
 }
 
 .profile-img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
     border-radius: 20px;
+    object-fit: contain;
     border: 2px solid var(--accent-color);
     box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+    display: block;
 }
 
 .about-image {
