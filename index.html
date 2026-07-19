@@ -113,38 +113,38 @@
                     </div>
                 </div>
 
-                <!-- Project 2: YouTube Content Research -->
+                <!-- Project 2: Multi-Tenant Content Ops Platform -->
                 <div class="featured-project-card">
                     <div class="project-header">
-                        <span class="project-label-tag">Course Creator · Content Strategy · n8n</span>
+                        <span class="project-label-tag">SaaS Company · Multi-Tenant Content Ops · n8n + Supabase</span>
                         <div class="project-stack-tags">
                             <span class="tag">n8n</span>
-                            <span class="tag">Gemini</span>
-                            <span class="tag">SerpAPI</span>
-                            <span class="tag">YouTube API</span>
-                            <span class="tag">Google Sheets</span>
-                            <span class="tag">Slack</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">GPT-4o</span>
+                            <span class="tag">Meta Graph API</span>
+                            <span class="tag">Google Drive API</span>
                         </div>
                     </div>
-                    <h3 class="project-title-main">YouTube Content Research & Script Generator</h3>
+                    <h3 class="project-title-main">Multi-Tenant Content Operations Platform</h3>
                     <div class="project-story-row">
                         <div class="story-block">
                             <span class="story-step">The challenge</span>
-                            <p>Course creator guessing content topics with no data. Team spending 4-6 hours per week on manual YouTube research, insights getting lost in someone's notes.</p>
+                            <p>A social media SaaS running content for dozens of client accounts. Every new client meant opening n8n and editing workflows by hand. Per-client rules lived inside the automation, so the system got more fragile with every account they signed.</p>
                         </div>
                         <div class="story-arrow">→</div>
                         <div class="story-block">
                             <span class="story-step">The decision</span>
-                            <p>Parallel research from SerpAPI and YouTube Data API, pattern analysis with Gemini, and a gap analysis prompt specifically designed to find high-demand/low-supply topics, not just what's already crowded.</p>
+                            <p>I moved the business logic out of the workflows and into Postgres. Tenant-scoped schema, RPCs for batch creation and slot assignment, and a scheduling engine that stays correct across daylight saving shifts. Assets land in Drive, a generic poller matches each file to its planned post, GPT-4o writes the caption, the client approves by email, and the batch gets slotted and published to Instagram and Facebook.</p>
                         </div>
                         <div class="story-arrow">→</div>
                         <div class="story-block">
                             <span class="story-step">The result</span>
-                            <p>4-6 hours of manual research replaced by a full content brief delivered to Slack every Monday morning. Script outline, titles, SEO description, and tags generated automatically per opportunity.</p>
+                            <p>24 workflows live in production against a 14-table schema. Slot claiming is race-safe through an advisory lock plus a partial unique index, so duplicate runs claim nothing. The publishing rail fails closed: on any error the batch lands in a terminal state with a Slack alert instead of posting to the wrong account. Drive intake is idempotent, with a dedup table and two unique constraints on filename. A documented end-to-end audit found a comment monitor that had been failing silently for 23 consecutive runs and a dead publish callback, both now green.</p>
                         </div>
                     </div>
                     <div class="project-video-slot">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3NgMqnMm2Hc?si=0F2wYkzzndQFAiP_" title="AI-Powered System to Optimize YouTube Content Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pSVkIZeDR6E" title="Multi-Tenant Content Operations Platform: n8n + Supabase in Production" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
 
