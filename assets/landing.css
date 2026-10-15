@@ -21,3 +21,6 @@
 .lp-faq summary:after{content:"+";float:right;color:var(--text-secondary)}
 .lp-faq details[open] summary:after{content:"–"}
 .lp-faq details p{color:var(--text-secondary);margin-top:10px;line-height:1.6}
+.lp-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
+.lp-gallery img{width:100%;height:auto;border-radius:14px;border:1px solid var(--border-color);display:block}
+@media (max-width:760px){.lp-gallery{grid-template-columns:1fr}}
